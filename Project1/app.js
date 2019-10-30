@@ -32,6 +32,9 @@ UI.prototype.addBookToList = function(book){
 
 //Show Alert
 UI.prototype.showAlert = function(message, className){
+
+    //get the list
+    const list = document.querySelector('#book-form');
     // Create div
     const div = document.createElement('div');
 
@@ -45,10 +48,11 @@ UI.prototype.showAlert = function(message, className){
     const container = document.querySelector('.container');
 
     //Get from
-    const form = document.querySelector('#book-form');
+    // const form = document.querySelector('#book-form');
 
+    console.log(container);
     //Insert alert
-    container.insertBefore(div, form);
+    container.insertBefore(div, list);
 
     //Timeout after 3 sec
 
@@ -94,8 +98,6 @@ function(e){
             // Clear Fileds
             ui.clearFields();
         }
-
-         
 
         e.preventDefault();
 }
