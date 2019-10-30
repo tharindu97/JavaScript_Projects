@@ -62,6 +62,13 @@ UI.prototype.showAlert = function(message, className){
 
 }
 
+// Delete Book
+UI.prototype.deleteBook = function(target){
+    if(target.className === 'delete'){
+        target.parentElement.parentElement.remove();
+    }
+}
+
 // Clear Fields
 
 UI.prototype.clearFields = function(){
@@ -102,3 +109,17 @@ function(e){
         e.preventDefault();
 }
 );
+
+//Event Listener for delete
+
+document.getElementById('book-list').addEventListener('click', function(e){
+    //Instantiate UI
+    const ui = new UI();
+
+    ui.deleteBook(e.target);
+
+    // Show message
+
+    ui.showAlert('Book Removed!', 'success');
+    e.preventDefault();
+});
