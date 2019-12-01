@@ -1,4 +1,4 @@
-const name = 'Tharindu Kavishna';
+/*const name = 'Tharindu--- Kavishna';
 const age = 22;
 const job = 'Web Development';
 const city = 'panama';
@@ -27,3 +27,19 @@ html =`
     </ul>
 `;
 document.body.innerHTML = html;
+
+const person = {
+    firstName = 'tharindu'
+}
+
+let val;
+val = person;*/
+
+
+ let val;
+ const today = new Date();
+
+ val = today;
+
+ console.log(val);
+
